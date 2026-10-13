@@ -1,0 +1,15 @@
+{
+  "_readme": "Fill in after deploying with Remix (docs/DEPLOY_SEPOLIA.md), then rename this file to 11155111.json",
+  "chainId": 11155111,
+  "deployedAtBlock": 0,
+  "ResidentRegistry": "0x...",
+  "CommunityEscrow": "0x...",
+  "WATER": "0x...",
+  "ELECTRICITY": "0x...",
+  "GAS": "0x...",
+  "EV_CHARGING": "0x...",
+  "PARKING": "0x...",
+  "CLUBHOUSE": "0x...",
+  "WASTE": "0x...",
+  "SECURITY": "0x..."
+}

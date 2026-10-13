@@ -1,0 +1,18 @@
+{
+  "name": "aqualedger-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AquaLedger off-chain API: readings DB, data feed, on-chain push, event indexer",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node --no-warnings=ExperimentalWarning src/server.js",
+    "demo:setup": "node --no-warnings=ExperimentalWarning src/demoSetup.js",
+    "simulate:backfill": "node --no-warnings=ExperimentalWarning src/simulate.js --backfill",
+    "simulate:live": "node --no-warnings=ExperimentalWarning src/simulate.js --live --interval 10 --push-every 6",
+    "import:csv": "node --no-warnings=ExperimentalWarning src/importCsv.js"
+  },
+  "dependencies": {
+    "ethers": "^6.13.4"
+  }
+}

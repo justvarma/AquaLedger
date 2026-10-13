@@ -1,0 +1,450 @@
+[
+ {
+  "type": "constructor",
+  "inputs": [
+   {
+    "name": "registry_",
+    "type": "address",
+    "internalType": "address"
+   },
+   {
+    "name": "escrow_",
+    "type": "address",
+    "internalType": "address"
+   }
+  ],
+  "stateMutability": "nonpayable"
+ },
+ {
+  "type": "function",
+  "name": "calculateBill",
+  "inputs": [
+   {
+    "name": "",
+    "type": "address",
+    "internalType": "address"
+   },
+   {
+    "name": "",
+    "type": "uint256",
+    "internalType": "uint256"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "",
+    "type": "uint256",
+    "internalType": "uint256"
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
+  "name": "escrow",
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "",
+    "type": "address",
+    "internalType": "contract ICommunityEscrow"
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
+  "name": "finalizeBill",
+  "inputs": [
+   {
+    "name": "resident",
+    "type": "address",
+    "internalType": "address"
+   },
+   {
+    "name": "month",
+    "type": "uint32",
+    "internalType": "uint32"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "",
+    "type": "uint256",
+    "internalType": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable"
+ },
+ {
+  "type": "function",
+  "name": "finalizeBills",
+  "inputs": [
+   {
+    "name": "month",
+    "type": "uint32",
+    "internalType": "uint32"
+   },
+   {
+    "name": "residents_",
+    "type": "address[]",
+    "internalType": "address[]"
+   }
+  ],
+  "outputs": [],
+  "stateMutability": "nonpayable"
+ },
+ {
+  "type": "function",
+  "name": "flatFeePaise",
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "",
+    "type": "uint256",
+    "internalType": "uint256"
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
+  "name": "getRecord",
+  "inputs": [
+   {
+    "name": "resident",
+    "type": "address",
+    "internalType": "address"
+   },
+   {
+    "name": "month",
+    "type": "uint32",
+    "internalType": "uint32"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "",
+    "type": "tuple",
+    "internalType": "struct BaseModule.UsageRecord",
+    "components": [
+     {
+      "name": "usage",
+      "type": "uint256",
+      "internalType": "uint256"
+     },
+     {
+      "name": "batches",
+      "type": "uint32",
+      "internalType": "uint32"
+     },
+     {
+      "name": "dataHash",
+      "type": "bytes32",
+      "internalType": "bytes32"
+     },
+     {
+      "name": "updatedAt",
+      "type": "uint64",
+      "internalType": "uint64"
+     },
+     {
+      "name": "billPaise",
+      "type": "uint256",
+      "internalType": "uint256"
+     },
+     {
+      "name": "billed",
+      "type": "bool",
+      "internalType": "bool"
+     },
+     {
+      "name": "billId",
+      "type": "uint256",
+      "internalType": "uint256"
+     }
+    ]
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
+  "name": "logUsage",
+  "inputs": [
+   {
+    "name": "resident",
+    "type": "address",
+    "internalType": "address"
+   },
+   {
+    "name": "month",
+    "type": "uint32",
+    "internalType": "uint32"
+   },
+   {
+    "name": "delta",
+    "type": "uint256",
+    "internalType": "uint256"
+   },
+   {
+    "name": "batchHash",
+    "type": "bytes32",
+    "internalType": "bytes32"
+   }
+  ],
+  "outputs": [],
+  "stateMutability": "nonpayable"
+ },
+ {
+  "type": "function",
+  "name": "logUsageBatch",
+  "inputs": [
+   {
+    "name": "month",
+    "type": "uint32",
+    "internalType": "uint32"
+   },
+   {
+    "name": "residents_",
+    "type": "address[]",
+    "internalType": "address[]"
+   },
+   {
+    "name": "deltas",
+    "type": "uint256[]",
+    "internalType": "uint256[]"
+   },
+   {
+    "name": "batchHashes",
+    "type": "bytes32[]",
+    "internalType": "bytes32[]"
+   }
+  ],
+  "outputs": [],
+  "stateMutability": "nonpayable"
+ },
+ {
+  "type": "function",
+  "name": "moduleKey",
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "",
+    "type": "bytes32",
+    "internalType": "bytes32"
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
+  "name": "moduleName",
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "",
+    "type": "string",
+    "internalType": "string"
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
+  "name": "previewBill",
+  "inputs": [
+   {
+    "name": "resident",
+    "type": "address",
+    "internalType": "address"
+   },
+   {
+    "name": "month",
+    "type": "uint32",
+    "internalType": "uint32"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "",
+    "type": "uint256",
+    "internalType": "uint256"
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
+  "name": "registry",
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "",
+    "type": "address",
+    "internalType": "contract IResidentRegistry"
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "function",
+  "name": "setFlatFee",
+  "inputs": [
+   {
+    "name": "paise",
+    "type": "uint256",
+    "internalType": "uint256"
+   }
+  ],
+  "outputs": [],
+  "stateMutability": "nonpayable"
+ },
+ {
+  "type": "function",
+  "name": "usageUnit",
+  "inputs": [],
+  "outputs": [
+   {
+    "name": "",
+    "type": "string",
+    "internalType": "string"
+   }
+  ],
+  "stateMutability": "view"
+ },
+ {
+  "type": "event",
+  "name": "BillFinalized",
+  "inputs": [
+   {
+    "name": "resident",
+    "type": "address",
+    "indexed": true,
+    "internalType": "address"
+   },
+   {
+    "name": "month",
+    "type": "uint32",
+    "indexed": true,
+    "internalType": "uint32"
+   },
+   {
+    "name": "usage",
+    "type": "uint256",
+    "indexed": false,
+    "internalType": "uint256"
+   },
+   {
+    "name": "billPaise",
+    "type": "uint256",
+    "indexed": false,
+    "internalType": "uint256"
+   },
+   {
+    "name": "billId",
+    "type": "uint256",
+    "indexed": false,
+    "internalType": "uint256"
+   }
+  ],
+  "anonymous": false
+ },
+ {
+  "type": "event",
+  "name": "RatesUpdated",
+  "inputs": [],
+  "anonymous": false
+ },
+ {
+  "type": "event",
+  "name": "UsageLogged",
+  "inputs": [
+   {
+    "name": "resident",
+    "type": "address",
+    "indexed": true,
+    "internalType": "address"
+   },
+   {
+    "name": "month",
+    "type": "uint32",
+    "indexed": true,
+    "internalType": "uint32"
+   },
+   {
+    "name": "delta",
+    "type": "uint256",
+    "indexed": false,
+    "internalType": "uint256"
+   },
+   {
+    "name": "newTotal",
+    "type": "uint256",
+    "indexed": false,
+    "internalType": "uint256"
+   },
+   {
+    "name": "batchHash",
+    "type": "bytes32",
+    "indexed": false,
+    "internalType": "bytes32"
+   },
+   {
+    "name": "dataHash",
+    "type": "bytes32",
+    "indexed": false,
+    "internalType": "bytes32"
+   }
+  ],
+  "anonymous": false
+ },
+ {
+  "type": "error",
+  "name": "AlreadyBilled",
+  "inputs": [
+   {
+    "name": "resident",
+    "type": "address",
+    "internalType": "address"
+   },
+   {
+    "name": "month",
+    "type": "uint32",
+    "internalType": "uint32"
+   }
+  ]
+ },
+ {
+  "type": "error",
+  "name": "InvalidMonth",
+  "inputs": [
+   {
+    "name": "month",
+    "type": "uint32",
+    "internalType": "uint32"
+   }
+  ]
+ },
+ {
+  "type": "error",
+  "name": "LengthMismatch",
+  "inputs": []
+ },
+ {
+  "type": "error",
+  "name": "NotActiveResident",
+  "inputs": [
+   {
+    "name": "wallet",
+    "type": "address",
+    "internalType": "address"
+   }
+  ]
+ },
+ {
+  "type": "error",
+  "name": "NotAdmin",
+  "inputs": []
+ }
+]
