@@ -21,10 +21,10 @@ This implements the AquaLedger KT document, sections 1–11.
                          ┌────────────────────── Ethereum (Sepolia / local anvil) ──────────────────────┐
                          │                                                                               │
                          │   ResidentRegistry  ◄──── isAdmin / isActiveResident ────┐                    │
-                         │   (identity, roles)                                       │                    │
-                         │                                                           │                    │
+                         │   (identity, roles)                                       │                   │
+                         │                                                           │                   │
                          │   WaterModule  ElectricityModule  GasModule  EVChargingModule                 │
-                         │   ParkingModule  ClubhouseModule  WasteModule  SecurityModule                  │
+                         │   ParkingModule  ClubhouseModule  WasteModule  SecurityModule                 │
                          │     │  logUsage / logUsageBatch  (usage + hash chain)                         │
                          │     │  finalizeBill  ── calculateBill() ──► addBill()                         │
                          │     ▼                                                                         │
